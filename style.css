@@ -100,9 +100,6 @@ footer a:hover {
     /* Fix for background scrolling on mobile */
     body {
         background-attachment: scroll; /* Disable fixed background on mobile */
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     /* Ensure overlay works correctly on mobile */
