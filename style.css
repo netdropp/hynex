@@ -10,13 +10,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('https://i.imgur.com/lnQm0RN.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 /* Overlay Effect */
@@ -95,8 +92,27 @@ footer a:hover {
     text-decoration: underline; /* Underline the link on hover */
 }
 
+/* Background Styles */
+body {
+    background-image: url('https://i.imgur.com/lnQm0RN.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Make background fixed on desktop */
+}
+
+/* Header and Main Content Container */
+main {
+    position: relative;
+    z-index: 1; /* Ensure the text is above the background */
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
+    body {
+        background-attachment: scroll; /* Disable background fix on mobile */
+    }
+
     h1 {
         font-size: 2.5em; /* Smaller font size for mobile */
     }
@@ -112,3 +128,4 @@ footer a:hover {
     input[type="email"] {
         margin-bottom: 10px; /* Add margin between input and button */
     }
+}
