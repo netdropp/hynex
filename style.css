@@ -1,4 +1,3 @@
-
 /* General Styles */
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -15,6 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
 }
@@ -97,10 +97,6 @@ footer a:hover {
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-    body {
-        background-attachment: unset; /* Remove background-attachment on mobile */
-    }
-
     h1 {
         font-size: 2.5em; /* Smaller font size for mobile */
     }
