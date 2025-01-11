@@ -96,7 +96,7 @@ footer a:hover {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     h1 {
         font-size: 2.5em; /* Smaller font size for mobile */
     }
