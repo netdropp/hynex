@@ -1,4 +1,4 @@
-/* Body and overall styles */
+/* General Styles */
 body {
     font-family: 'Noto Sans', sans-serif;
     background-color: #282c34;
@@ -17,26 +17,9 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
-    animation: backgroundAnimation 10s infinite alternate;
 }
 
-/* Background animation */
-@keyframes backgroundAnimation {
-    0% {
-        background-position: center;
-    }
-    100% {
-        background-position: 50% 50%;
-    }
-}
-
-/* Text shadow effect */
-h1, p {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Overlay */
+/* Overlay Effect */
 body::after {
     content: "";
     position: absolute;
@@ -44,23 +27,26 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better text contrast */
     z-index: -1;
 }
 
 /* Header */
 header {
     margin-bottom: 30px;
+    padding-top: 20px; /* Adds space from the top */
 }
 
 h1 {
     font-size: 3em;
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
 }
 
 p {
     font-size: 1.2em;
     margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
 }
 
 /* Form */
@@ -68,25 +54,18 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-/* Improved email input */
+/* Input Styles */
 input[type="email"] {
     padding: 10px;
     font-size: 1em;
     margin-right: 10px;
-    border: 2px solid #9b59b6;
+    border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
-input[type="email"]:focus {
-    border-color: #8e44ad;
-    outline: none;
-}
-
-/* Submit button */
+/* Button Styles */
 button {
     padding: 10px 20px;
     font-size: 1em;
@@ -99,8 +78,6 @@ button {
 
 button:hover {
     background-color: #8e44ad !important; /* Darker purple for hover */
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
 }
 
 /* Footer */
@@ -109,61 +86,21 @@ footer {
     font-size: 0.8em;
 }
 
-footer a {
-    color: #f39c12;
-    text-decoration: none;
-}
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em; /* Smaller font size for mobile */
+    }
 
-footer a:hover {
-    text-decoration: underline;
-}
+    p {
+        font-size: 1em; /* Adjust text size for better fit */
+    }
 
-/* Smooth scrolling for the page */
-html {
-    scroll-behavior: smooth;
-}
+    form {
+        flex-direction: column; /* Stack the input and button vertically */
+    }
 
-/* Scroll to Top Button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #9b59b6;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    display: none;
-}
-
-.scroll-to-top:hover {
-    background-color: #8e44ad;
-}
-
-/* Loading animation */
-#loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    font-size: 2em;
-    opacity: 1;
-    animation: fadeOut 1s forwards;
-    transition: opacity 0.3s ease-out;
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
+    input[type="email"] {
+        margin-bottom: 10px; /* Add margin between input and button */
     }
 }
