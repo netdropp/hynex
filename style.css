@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Keep fixed for desktop */
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
 }
@@ -34,19 +34,19 @@ body::after {
 /* Header */
 header {
     margin-bottom: 30px;
-    padding-top: 20px;
+    padding-top: 20px; /* Adds space from the top */
 }
 
 h1 {
     font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
 }
 
 p {
     font-size: 1.2em;
     margin: 10px 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
 }
 
 /* Form */
@@ -87,40 +87,29 @@ footer {
 }
 
 footer a {
-    color: #9b59b6;
+    color: #9b59b6; /* Purple color for the link */
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline the link on hover */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-    body {
-        background-attachment: scroll; /* Disable fixed background on mobile */
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    body::after {
-        background-color: rgba(0, 0, 0, 0.5); /* Ensure overlay works properly on mobile */
-    }
-
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Smaller font size for mobile */
     }
 
     p {
-        font-size: 1em;
+        font-size: 1em; /* Adjust text size for better fit */
     }
 
     form {
-        flex-direction: column;
+        flex-direction: column; /* Stack the input and button vertically */
     }
 
     input[type="email"] {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Add margin between input and button */
     }
 }
