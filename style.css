@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -9,15 +10,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite; /* Animated Gradient */
-    min-height: 100vh;
-    position: relative;
     background-image: url('https://i.imgur.com/lnQm0RN.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
 }
 
 /* Overlay Effect */
@@ -30,25 +29,6 @@ body::after {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better text contrast */
     z-index: -1;
-}
-
-/* Animated Gradient */
-@keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(45deg, #9b59b6, #f39c12);
-    }
-    25% {
-        background: linear-gradient(45deg, #3498db, #f39c12);
-    }
-    50% {
-        background: linear-gradient(45deg, #e74c3c, #2ecc71);
-    }
-    75% {
-        background: linear-gradient(45deg, #2ecc71, #3498db);
-    }
-    100% {
-        background: linear-gradient(45deg, #9b59b6, #f39c12);
-    }
 }
 
 /* Header */
