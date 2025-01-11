@@ -58,3 +58,11 @@ footer {
     margin-top: 30px;
     font-size: 0.8em;
 }
+body {
+  background-image: url('https://imgur.com/a/ByetZdN'); /* or absolute URL */
+  background-size: cover; /* Makes it fit the screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+  height: 100vh; /* Covers the full viewport height */
+  margin: 0; /* Removes default margin */
+}
