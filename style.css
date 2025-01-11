@@ -60,7 +60,7 @@ input[type="email"] {
 button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #9b59b6; /* Purple color */
+    background-color: #9b59b6 !important; /* Purple color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: #8e44ad; /* Darker purple for hover */
+    background-color: #8e44ad !important; /* Darker purple for hover */
 }
 
 footer {
