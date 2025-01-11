@@ -9,11 +9,28 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
+    /* Background image properties */
     background-image: url('https://i.imgur.com/lnQm0RN.jpeg'); /* Direct image URL */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Ensures body takes full height */
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    /* Overlay effect */
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with some transparency */
+    z-index: -1; /* Sends the overlay behind the content */
 }
 
 header {
