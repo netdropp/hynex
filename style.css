@@ -10,24 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    min-height: 100vh;
-}
-
-/* Background Image */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('https://i.imgur.com/lnQm0RN.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Ensure background stays behind content */
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 /* Overlay Effect */
@@ -52,14 +42,12 @@ h1 {
     font-size: 3em;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
-    z-index: 1; /* Ensures the text appears above the background */
 }
 
 p {
     font-size: 1.2em;
     margin: 10px 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
-    z-index: 1; /* Ensures the paragraph appears above the background */
 }
 
 /* Form */
