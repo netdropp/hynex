@@ -52,12 +52,14 @@ h1 {
     font-size: 3em;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
+    z-index: 1; /* Ensures the text appears above the background */
 }
 
 p {
     font-size: 1.2em;
     margin: 10px 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
+    z-index: 1; /* Ensures the paragraph appears above the background */
 }
 
 /* Form */
