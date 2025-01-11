@@ -34,19 +34,22 @@ body::after {
 /* Header */
 header {
     margin-bottom: 30px;
-    padding-top: 20px;
+    padding-top: 20px; /* Adds space from the top */
+    z-index: 1;
 }
 
 h1 {
     font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
+    z-index: 2;
 }
 
 p {
     font-size: 1.2em;
     margin: 10px 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
+    z-index: 2;
 }
 
 /* Form */
@@ -87,12 +90,12 @@ footer {
 }
 
 footer a {
-    color: #9b59b6;
+    color: #9b59b6; /* Purple color for the link */
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline the link on hover */
 }
 
 /* Mobile Responsiveness */
@@ -109,11 +112,16 @@ footer a:hover {
 
     /* Adjust text size for mobile */
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Slightly smaller on mobile */
     }
 
     p {
         font-size: 1em;
+    }
+
+    /* Ensure header text is not overlapping */
+    header {
+        padding-top: 10px; /* Adjust padding on mobile for spacing */
     }
 
     /* Stack the form elements vertically on mobile */
