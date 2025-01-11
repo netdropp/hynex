@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Keep fixed for desktop */
     min-height: 100vh;
     position: relative;
 }
@@ -34,19 +34,19 @@ body::after {
 /* Header */
 header {
     margin-bottom: 30px;
-    padding-top: 20px; /* Adds space from the top */
+    padding-top: 20px;
 }
 
 h1 {
     font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
     font-size: 1.2em;
     margin: 10px 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Form */
@@ -87,29 +87,49 @@ footer {
 }
 
 footer a {
-    color: #9b59b6; /* Purple color for the link */
+    color: #9b59b6;
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Underline the link on hover */
+    text-decoration: underline;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
+    /* Fix for background scrolling on mobile */
+    body {
+        background-attachment: scroll; /* Disable fixed background on mobile */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* Ensure overlay works correctly on mobile */
+    body::after {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Adjust text size for mobile */
     h1 {
-        font-size: 2.5em; /* Smaller font size for mobile */
+        font-size: 2.5em;
     }
 
     p {
-        font-size: 1em; /* Adjust text size for better fit */
+        font-size: 1em;
     }
 
+    /* Stack the form elements vertically on mobile */
     form {
-        flex-direction: column; /* Stack the input and button vertically */
+        flex-direction: column;
     }
 
     input[type="email"] {
         margin-bottom: 10px; /* Add margin between input and button */
+    }
+
+    /* Additional padding for button on mobile */
+    button {
+        padding: 12px 22px;
     }
 }
