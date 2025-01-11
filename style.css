@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Keep fixed for desktop */
     min-height: 100vh;
     position: relative;
 }
@@ -31,72 +31,12 @@ body::after {
     z-index: -1;
 }
 
-/* Header */
-header {
-    margin-bottom: 30px;
-    padding-top: 20px; /* Adds space from the top */
-}
-
-h1 {
-    font-size: 3em;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
-}
-
-p {
-    font-size: 1.2em;
-    margin: 10px 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the paragraph */
-}
-
-/* Form */
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Input Styles */
-input[type="email"] {
-    padding: 10px;
-    font-size: 1em;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Button Styles */
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #9b59b6 !important; /* Purple color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #8e44ad !important; /* Darker purple for hover */
-}
-
-/* Footer */
-footer {
-    margin-top: 30px;
-    font-size: 0.8em;
-}
-
-footer a {
-    color: #9b59b6; /* Purple color for the link */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline; /* Underline the link on hover */
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
+    body {
+        background-attachment: scroll; /* Disable fixed background on mobile */
+    }
+
     h1 {
         font-size: 2.5em; /* Smaller font size for mobile */
     }
