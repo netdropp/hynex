@@ -10,9 +10,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('https://i.imgur.com/lnQm0RN.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
-    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 /* Overlay Effect */
@@ -91,26 +95,8 @@ footer a:hover {
     text-decoration: underline; /* Underline the link on hover */
 }
 
-/* Background Styles */
-body {
-    background-image: url('https://i.imgur.com/lnQm0RN.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Desktop Styles: Fixed Background */
-@media (min-width: 601px) {
-    body {
-        background-attachment: fixed; /* Fixed background for desktop */
-    }
-}
-
-/* Mobile Styles: Fallback Background */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
-    body {
-        background-attachment: scroll; /* Scrollable background for mobile */
-    }
     h1 {
         font-size: 2.5em; /* Smaller font size for mobile */
     }
